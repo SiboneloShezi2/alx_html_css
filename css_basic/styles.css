@@ -17,3 +17,44 @@ footer {
 main {
   padding: 20px;
 }
+
+/* styles.css */
+
+/* Apply flexbox to body and main */
+body,
+main {
+  display: flex;
+}
+
+/* Stack header, main, footer vertically */
+body {
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Arrange article and aside horizontally within main */
+main {
+  flex-direction: row;
+  flex: auto; /* Allow main to grow */
+  flex-grow: 1;
+}
+
+/* Article takes 2/3 and aside takes 1/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Basic styling for header and footer */
+header,
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+}
